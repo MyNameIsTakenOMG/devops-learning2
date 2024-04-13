@@ -1,6 +1,7 @@
 # devops-learning2
 ## table of contents
  - [Linux](#linux)
+ - [Vagrant and Linux servers](vagrant-and-linux-servers)
  - [AWS part 1](#aws-part-1)
 
 
@@ -89,6 +90,13 @@
    - `visudo` --> will open nano editor, but can be changed by using `export EDITOR=vim`
    - package manager: `apt` : `apt remove <package>`, `<apt purge package>`
 
+## Vagrant and Linux servers
+ - so far concepts: vagrant cloud(VM images), vagrantfile(VM settings), vagrant commands: `vagrant <up|status|ssh|halt|destroy>`
+ - vagrant networking, provisioning, RAM/cpu etc, multi-vm, documentation
+ - vagrant sync directories
+ - vagrant provisioning
+ - vagrant website setup
+
 
 ## AWS part 1
  - ec2 instance:
@@ -98,6 +106,23 @@
    - adding storage
    - adding tag
    - configure security group
+ - ebs volume:
+   - block based storage, runs ec2 os, store data from db, file data, etc. az-specific
+   - general purpose(ssd), provisioned IOPS(large databases), throughput optimized HD, gold HDD (file servers), magnetic (backups & archives)
+   - after attaching a block storage to ec2 instance, we need to create a partition and then formatting it. `fdisk -l` to list all disks on your linux virtual machine. `df -h`: Show information about the file system on which each FILE resides, or all file systems by default. then `fdisk /dev/xvdb` to go to the partition setttings. for formatting, we use `mkfs`, two taps then choose `mkfs.ext4 <partition path--/dev/xvdb1>`.  and then it is time to mount it, `mount <partition path -- /dev/xvdb1>  <the mount path -- /var/www/html/images>`, or unmount it using `umount <the mount path -- /var/www/html/images>`.  for permanent mount, vim the file `/etc/fstab`, and append `/dev/xvdf1 /var/www/html/images  ext4 defaults(settings) 0(no dumping) 0(no file system check)`. then `mount -a` to mount all entries.
+   - snapshot: `unmount partition`(prevent data from being overwritten), `detach volume`, `create a new volume`, `attach the new volume`, `mount it back`
+ - elb load balancer:
+   - ALB: layer7, route traffic based on advanced app level info that includes in the content of the request. it is used for http or https requests.
+   - NLB: layer4, static IP, handle millions of requests
+   - target group
+   - ami (image builder)
+   - launch template
+ - cloudwatch
+   - monitoring performance of aws services using metrics
+   - metrics: can set alarms on (integrated with SNS for notifications)
+   - events
+   - logs
+   - `stress command`: `nohup stress -c 4 -t 300`
 
 
 
