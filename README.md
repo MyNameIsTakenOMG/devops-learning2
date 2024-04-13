@@ -96,6 +96,11 @@
  - vagrant sync directories
  - vagrant provisioning
  - vagrant website setup
+ - vagrant wordpress setup
+ - automate website setup
+ - automate wordpress setup
+ - multi-vm
+
 
 
 ## AWS part 1
