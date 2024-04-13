@@ -3,6 +3,7 @@
  - [Linux](#linux)
  - [Vagrant and Linux servers](vagrant-and-linux-servers)
  - [Variables and yaml and json](variables-and-yaml-json)
+ - [VProfile project](vprofile-project)
  - [AWS part 1](#aws-part-1)
 
 
@@ -108,6 +109,13 @@
  - json
  - yaml
 
+## VProfile project
+ - vm setup
+ - db, cache & queue setup
+ - app setup
+ - nginx setup
+ - validation
+ - automation
 
 ## AWS part 1
  - ec2 instance:
