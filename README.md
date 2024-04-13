@@ -4,6 +4,9 @@
  - [Vagrant and Linux servers](vagrant-and-linux-servers)
  - [Variables and yaml and json](variables-and-yaml-json)
  - [VProfile project](vprofile-project)
+ - [Networking](networking)
+ - [Containers introduction](containers-introduction)
+ - [Bash scripting](bash-scripting)
  - [AWS part 1](#aws-part-1)
 
 
@@ -111,11 +114,40 @@
 
 ## VProfile project
  - vm setup
- - db, cache & queue setup
+ - db, cache & queue setup --> `continue...`
  - app setup
  - nginx setup
  - validation
  - automation
+
+## Networking
+ - components of network: computers, cables, network interfacing card, switches, routers, OS
+ - ISO -> developed OSI model: (physical:bits, data link:frames, network:packets, transport:segments, session:data, presentation:data, application:data)
+   - services: a set of actions that a layer offers to a higher layer
+   - protocols: a set of rules that a layer uses to exchange information
+   - interfaces: a interface is communication between the layers
+ - networks & IP:
+   - LAN: local area network
+   - WAN: wide area network
+   - MAN: metropolitan area network
+   - CAN: campus area network
+   - PAN: personal area network (hotspot)
+   - switches: connect multiple computers together in a small network
+   - routers: connect multiple networks together
+   - private ip range in aws vpc:
+     - class A 10.0.0.0/8
+     - class B 172.16.0.0/12
+     - class C 192.168.0.0/16
+ - protocols and ports:
+   - protocols: a formal spec that defines the procedures that must be followed when transmitting or receiving data. Protocols define the format, timing, sequence, and error checking used on the network.
+   - ports: 22, 21, 80, 443, 53
+ - network commands: `ifconfig`, `ping`,`tracert`, `netstat -antp`: showing all tcp open ports on the local machine, `ss -tunlp`, `nmap`, `dig`, `nslookup`, `route -n`, `arp`, `mtr`(live version of tracert), `telnet`,
+
+## Containers introduction
+ - 
+
+## Bash scripting
+ - 
 
 ## AWS part 1
  - ec2 instance:
