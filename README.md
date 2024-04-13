@@ -2,6 +2,7 @@
 ## table of contents
  - [Linux](#linux)
  - [Vagrant and Linux servers](vagrant-and-linux-servers)
+ - [Variables and yaml and json](variables-and-yaml-json)
  - [AWS part 1](#aws-part-1)
 
 
@@ -101,6 +102,11 @@
  - automate wordpress setup
  - multi-vm
 
+## Variables and yaml and json
+ - variables, (make sure using double quotes, otherwise it will print as-is if using single quotes)
+ - python DS: string, integer, list, tuple and dictionary
+ - json
+ - yaml
 
 
 ## AWS part 1
