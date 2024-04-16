@@ -144,7 +144,7 @@
  - network commands: `ifconfig`, `ping`,`tracert`, `netstat -antp`: showing all tcp open ports on the local machine, `ss -tunlp`, `nmap`, `dig`, `nslookup`, `route -n`, `arp`, `mtr`(live version of tracert), `telnet`,
 
 ## Containers introduction
- - 
+ - microservices:  an architectural and organiztional approach to software development where software is composed of small independent services that communicate over well-defined apis. these services are owned by small, self-contained teams.
 
 ## Bash scripting
  - 
