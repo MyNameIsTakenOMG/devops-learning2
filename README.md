@@ -147,7 +147,33 @@
  - microservices:  an architectural and organiztional approach to software development where software is composed of small independent services that communicate over well-defined apis. these services are owned by small, self-contained teams.
 
 ## Bash scripting
- - 
+ - variables:  `SKILL="ASDF", echo $SKILL, or $ART_NAME.zip(with file extension)` : no space in-between !!!!
+ - command line arguments: `$0 is the name of the script`, `$1 - $9 the first 9 arguments to the bash script`
+ - system variables:
+   - `$#`: how many arguments were passed to the script
+   - `$@`: all arguments supplied to the script
+   - `$?`: exit status of the most recently run process
+   - `$$`: the process id of the current script
+   - `$USER`: the username of the user who runs the script
+   - `$HOSTNAME`: the hostname of the machine that script runs on
+   - `$SECONDS`: the seconds since the script starts
+   - `$RANDOM`: return a random number each time it is referred to
+   - `$LINENO`: return the current line number of the script
+ - quotes: referring to an argument in single quotes will lose its meaning:`'this is not okay $SKILL'`. to escape some special characters, like `$`, using `\` to escape.
+ - **note**: exit code: `0` means success, `1` means fail
+ - command substitution: using "`" to store the output to an argument, like "UP=`uptime`" or using "$(uptime)", such as "FREE_MEM=`free -m | grep -i mem | awk '{print $4}'`" 
+ - exporting variables: exporting variables makes variables globally available for any child shell. the file `.bashrc` in home directory can be used to store `export <variable>="<value>"`, thus the variable will persists between user sessions. or if wanna make the variables globally for any users, then `vi /etc/profile`. **note**: `.bashrc` will override `/etc/profile`
+ - user input: `read val1`, `read -p '(prompt)' val1`, `read -sp '(prompt)' val1 `(hide while typing)
+ - decision-making / conditions:
+   - `if [ $NUM -gt 100 ] then ... else ... fi` (**note**: be aware of the spaces!!!!!!!)
+   - `if [ ] then ... elif [ ] ... else ... fi`
+ - monitoring scripts:  using `crontab`(install cronie for fedora), then create a cron job
+ - loops/ while loops:
+   - `for var1 in item1 item2 item3 item4 ... do ... done`
+   - `while [ ] do ... done` , **NOTE**: The double parentheses (( )) in shell scripting are used for arithmetic operations. 
+ - remote command execution: since multiple virtual machine running on the same host, so on a virtual machine, we modify its `/etc/hosts` file to add other virtual machines so that we can refer to them later (vagrant user, vagrant password). **note**: if the login method is `public key` not password, then go to `/etc/ssh/sshd_config`: change `passwordauthentication` (no --> yes). lastly, doing `ssh <user>@host <command>` to execute the command remotely without logging onto another virtual machine.
+ - ssh key exchange: `ssh-keygen`--> `id_rsa`, `id_rsa.pub`, then `ssh-copy-id <user>@host`, then save time typing password each time doing remote command execution.
+ - using `scp` to securely copy files from one vm to another, `scp <file> <user>@host:<path>`
 
 ## AWS part 1
  - ec2 instance:
@@ -174,6 +200,8 @@
    - events
    - logs
    - `stress command`: `nohup stress -c 4 -t 300`
+ - EFS
+   - 
 
 
 
