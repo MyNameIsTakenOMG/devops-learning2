@@ -1,12 +1,12 @@
 # devops-learning2
 ## table of contents
  - [Linux](#linux)
- - [Vagrant and Linux servers](vagrant-and-linux-servers)
- - [Variables and yaml and json](variables-and-yaml-json)
- - [VProfile project](vprofile-project)
- - [Networking](networking)
- - [Containers introduction](containers-introduction)
- - [Bash scripting](bash-scripting)
+ - [Vagrant and Linux servers](#vagrant-and-linux-servers)
+ - [Variables and yaml and json](#variables-and-yaml-json)
+ - [VProfile project](#vprofile-project)
+ - [Networking](#networking)
+ - [Containers introduction](#containers-introduction)
+ - [Bash scripting](#bash-scripting)
  - [AWS part 1](#aws-part-1)
 
 
