@@ -8,6 +8,10 @@
  - [Containers introduction](#containers-introduction)
  - [Bash scripting](#bash-scripting)
  - [AWS part 1](#aws-part-1)
+ - [AWS project lift shift](#aws-project-lift-shift)
+ - [ReArchitecturing AWS project](#rearchitecturing-aws-project)
+ - [Git](#git)
+ - [Maven](#maven)
 
 
 ## Linux
@@ -203,6 +207,16 @@
  - EFS
    - 
 
+
+## AWS project lift shift
+
+## ReArchitecturing AWS project
+
+## Git
+
+## Maven
+ - building process: source code -> compile( javac, etc) -> test(unit, integration tests) -> packaging( jar, war, exe, zip, msi, etc) -> health check (code analysis, finding bugs)
+ - maven phases: validate -> compile -> test -> package (pom file) -> integration-test -> verify -> install -> deploy
 
 
 
