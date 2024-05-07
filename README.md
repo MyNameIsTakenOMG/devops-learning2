@@ -12,6 +12,7 @@
  - [ReArchitecturing AWS project](#rearchitecturing-aws-project)
  - [Git](#git)
  - [Maven](#maven)
+ - [CI with jenkins](#ci-with-jenkins)
 
 
 ## Linux
@@ -218,7 +219,29 @@
  - building process: source code -> compile( javac, etc) -> test(unit, integration tests) -> packaging( jar, war, exe, zip, msi, etc) -> health check (code analysis, finding bugs)
  - maven phases: validate -> compile -> test -> package (pom file) -> integration-test -> verify -> install -> deploy
 
-
+## CI with jenkins
+ - features:
+   - open-source
+   - extensible -- plugins: VCS plugins, cloud plugins, build plugins, etc
+ - jobs in jenkins:
+   - freestyle: graphical jobs, for learning purpose, not for real-life practice.
+   - pipeline: created in groovy, recommended.
+ - installing tools in jenkins:
+   - the tool
+   - the plugin
+ - plugins, versioning, etc
+ - flow of CI:
+   - fetch code --> build code --> test code --> code analysis (sonarQube) --> versioning artifact (nexus)
+ - steps of CI integrations:
+   - jenkins setup
+   - nexus setup
+   - sonarqube setup
+   - security group
+   - plugins
+   - integrate: nexus & sonarqube
+   - write pipeline script
+   - set notification
+ - 
 
 
 
