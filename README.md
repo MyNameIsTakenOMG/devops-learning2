@@ -13,6 +13,8 @@
  - [Git](#git)
  - [Maven](#maven)
  - [CI with jenkins](#ci-with-jenkins)
+ - [Python](#python)
+ - [Ansible](#ansible)
 
 
 ## Linux
@@ -243,7 +245,11 @@
    - set notification
  - 
 
-
+## Python
+ - fundamentals
+ - OS task (os.system)
+ - python fabric
+## Ansible
 
 
 
