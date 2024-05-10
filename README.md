@@ -256,20 +256,51 @@
    - change management: production server changes
    - provisioning: setup servers from scratch / cloud provisioning
    - orchestration: large scale automation framwork
+   - connections:
+     - for linux or windows: ssh/ winrm : send python scripts to the targets and execute the script remotely.
+     - for cloud: or apis: execute the task locally.
  - Adhoc commands
  - playbook:
    - debugging: `-v / -vv / -vvv / -vvvv` ; `--syntax-check`
    - dry-run: `-C`
  - modules -- find, use, troubleshoot & repeat
- - configuration
+ - configuration:
+   - order of ansible config:
+     - ANSIBLE_CONFIG (environment variable if set)
+     - ansible.cfg (in the current directory) --> repo specific
+     - ~/.ansible.cfg (in the home directory)
+     - /etc/ansible/ansible.cfg
+   - **note**: should have a config file in the current directory along with the inventory file
  - variables & debug
+   - playbook variables
+   - inventory based variables
+   - roles (including variables from files in playbook)
+   - fact variables: setup module
+   - store output: register module
+   - print output: debug module
  - group & host variables
+   - group_vars/all
+   - group_vars/<group name>
+   - host_vars/<host name>
+   - group-vars-all --> group-vars-<group name> --> host-vars-<host name> --> playbook-vars --> cli-vars
+   - `cli commands with variables: -e <var>=<value>`
  - fact variables
- - decision making
+   - runtime variables: `ansible_os_family`, `ansible_processor_cores`, `ansible_kernel`, `ansible_devices`, `ansible_default_ipv4`, `ansible_architecture`
+ - decision making:
+   - provisioning server:
+     - NTP service on multi os
+     - users & groups
+     - config files
+     - decision making
+     - loops
+     - templates
+     - handlers
+     - roles
  - loops
  - file, copy & template modules
  - handlers
- - roles
+ - roles: the community: galaxy.ansible
+   - to init a role: `ansible-galaxy init <role name>`
  - for aws
   
 
