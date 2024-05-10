@@ -249,7 +249,29 @@
  - fundamentals
  - OS task (os.system)
  - python fabric
+
 ## Ansible
+ - use cases:
+   - automation; any system automation
+   - change management: production server changes
+   - provisioning: setup servers from scratch / cloud provisioning
+   - orchestration: large scale automation framwork
+ - Adhoc commands
+ - playbook:
+   - debugging: `-v / -vv / -vvv / -vvvv` ; `--syntax-check`
+   - dry-run: `-C`
+ - modules -- find, use, troubleshoot & repeat
+ - configuration
+ - variables & debug
+ - group & host variables
+ - fact variables
+ - decision making
+ - loops
+ - file, copy & template modules
+ - handlers
+ - roles
+ - for aws
+  
 
 
 
