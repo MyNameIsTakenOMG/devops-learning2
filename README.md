@@ -15,6 +15,10 @@
  - [CI with jenkins](#ci-with-jenkins)
  - [Python](#python)
  - [Ansible](#ansible)
+ - [AWS part 2](#aws-part-2)
+ - [AWS CICD project](#aws-cicd-project)
+ - [Docker](#docker)
+ - [Terraform](#terraform)
 
 
 ## Linux
@@ -303,8 +307,54 @@
    - to init a role: `ansible-galaxy init <role name>`
  - for aws
   
+## AWS part 2
+ - vpc intro:
+   - private ip ranges:
+     - class A: 10.0.0.0/8
+     - class B: 172.16.0.0/12
+     - class C: 192.168.0.0/16
+ - vpc desing & components
+   - nat gateway
+   - internet gateway
+   - public subnet
+   - private subnet
+   - route tables
+   - bastion
+   - vpc peering
+ - ec2 log
+   - cloudwatch logs
+   - elb access log --> s3 bucket
+## AWS CICD project
+ - codecommit
+ - codebuild (buildspec.yml)
+ - codepipeline
+ - elastic beanstalk
+## Docker
+ - intro: containers are os virtualization, vms are hardware virtualization
+ - setup on ec2
+ - commands & concepts
+ - logs
+ - volumes
+ - building images
+ - entrypoint and CMD
+ - compose
+ - multi-stage dockerfile
 
-
-
-
-
+## Terraform
+ - intro: `terraform init | validate | fmt | plan | apply | destroy`
+   - **be aware**: running `terraform plan` to check if the resource will be destroy
+ - variables:
+   - providers.tf
+   - vars.tf
+   - terraform.tfvars
+   - instance.tf
+ - provisioners:
+   - `provisioner`, `connection`
+   - building images
+   - use image and setup software and files: file uploads, remote_exec, or other provisioners(ansible, puppet or chef)
+ - output
+ - backend
+ - multiple resources provisioning
+ - aws EKS
+   - modules (do not put `provider` block in a module)
+   - different providers
