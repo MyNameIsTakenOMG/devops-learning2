@@ -333,12 +333,18 @@
  - intro: containers are os virtualization, vms are hardware virtualization
  - setup on ec2
  - commands & concepts
+   - `docker exec -it <container> /bin/bash`
+   - `docker run -it <image> /bin/bash`
  - logs
  - volumes
+   - volumes: managed by docker on linux(/var/lib/docker/volumes/)
+   - bind mounts: stored anywhere on the host system
+   - docker inspect, docker log
  - building images
  - entrypoint and CMD
  - compose
- - multi-stage dockerfile
+ - multi-stage dockerfile:
+   - **note**: whenever there is a build, we should have a multi-stage docker file to reduce the size of the image.
 
 ## Terraform
  - intro: `terraform init | validate | fmt | plan | apply | destroy`
