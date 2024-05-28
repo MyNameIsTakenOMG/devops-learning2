@@ -18,6 +18,9 @@
  - [AWS part 2](#aws-part-2)
  - [AWS CICD project](#aws-cicd-project)
  - [Docker](#docker)
+ - [Containerization](#containerization)
+ - [Kubenetes](#kubenetes)
+ - [App deployment on k8s cluster](#app-deployment-on-k8s-cluster)
  - [Terraform](#terraform)
 
 
@@ -345,6 +348,22 @@
  - compose
  - multi-stage dockerfile:
    - **note**: whenever there is a build, we should have a multi-stage docker file to reduce the size of the image.
+
+## Containerization
+
+## Kubenetes
+ - architecture:
+   - master node:
+     - etcd
+     - api server --- kubectl
+     - scheduler
+     - controller manager
+   - worker node:
+     - kubelet
+     - proxy
+     - container engine
+
+## App deployment on kubenetes cluster
 
 ## Terraform
  - intro: `terraform init | validate | fmt | plan | apply | destroy`
